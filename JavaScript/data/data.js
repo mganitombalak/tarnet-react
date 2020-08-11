@@ -31,5 +31,5 @@ var products = [
     }
 ]
 
-print title,rawPrice,tax,price
-print Ciro,Maliyet,Kar
+// print title,rawPrice,tax,price
+// print Ciro,Maliyet,Kar

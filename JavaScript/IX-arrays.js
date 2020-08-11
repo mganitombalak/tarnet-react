@@ -7,7 +7,7 @@ let arr = [
         surname: "Tombalak"
     },
     item => console.log(item),
-    function(){
+    function () {
         console.log("Hello world");
     },
     "Nbr?"
@@ -25,7 +25,7 @@ let product = {
     id: 1,
     type: 0,
     price: 29.90,
-    name:"Awesome Product",
+    name: "Awesome Product",
     profit: function () {
         this.price = this.price * 1.1;
     }
@@ -33,4 +33,13 @@ let product = {
 // let p = key => console.log(`${key} => ${typeof product[key]}`);
 // Object.keys(product).forEach(p);
 let p = value => console.log(value);
-arr.filter(item=> typeof item === 'function').forEach(p)
+// arr.filter(item => typeof item === 'function').forEach(p)
+let numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+// let sqrt = x => x * x;
+// numbers.map(sqrt).forEach(p);
+// numbers.unshift(0);
+// numbers.forEach(p);
+let popValue = numbers.pop();
+console.log(`${popValue}`);
+numbers.forEach(p);
+
