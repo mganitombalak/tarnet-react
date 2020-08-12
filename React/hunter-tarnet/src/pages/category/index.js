@@ -1,5 +1,5 @@
 import React from 'react';
-
-const Category =()=> <div>Category page!</div>
+import CategoryList from './list'
+const Category =()=> <CategoryList></CategoryList>
 
 export default Category;
