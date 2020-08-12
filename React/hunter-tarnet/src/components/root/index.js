@@ -1,15 +1,9 @@
 import React from 'react';
 import Header from '../header';
-import Card from '../card'
+import People from '../people'
 
 const Root = () => <div className="ui container">
                         <Header/>
-                        <div className='ui four column doubling stackable grid container link cards'>
-                            <Card/>
-                            <Card/>
-                            <Card/>
-                            <Card/>
-                            <Card/>
-                        </div>
+                        <People/>
                     </div>
 export default Root;
