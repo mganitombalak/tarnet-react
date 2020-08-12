@@ -6,10 +6,8 @@ import RightMenuItem from './components/menu-container/components/right-menu-con
 //FUNCTIONAL COMPONENT
 const Header = () => <MenuContainer>
     <MenuItem url="/">Dashboard</MenuItem>
-    <MenuItem url="/menu1">Menu-I</MenuItem>
-    <MenuItem url="/menu2">Menu-II</MenuItem>
-    <MenuItem url="/menu3">Menu-III</MenuItem>
-    <MenuItem url="/menu4">Menu-IV</MenuItem>
+    <MenuItem url="/category">Categories</MenuItem>
+    <MenuItem url="/unit">Units</MenuItem>
     <RightMenuContainer>
         <RightMenuItem></RightMenuItem>
     </RightMenuContainer>
