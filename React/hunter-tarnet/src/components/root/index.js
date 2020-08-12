@@ -4,6 +4,6 @@ import People from '../people'
 
 const Root = () => <div className="ui container">
                         <Header/>
-                        <People/>
+                        <People cardCount={16} />
                     </div>
 export default Root;
