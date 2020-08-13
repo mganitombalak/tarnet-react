@@ -7,7 +7,7 @@ const Header = props=>{
 
 return <thead>
     <Row>
-        
+        {props.headers.map((x,index)=><th key={index}>x</th>)}
     </Row>
 
 </thead>
