@@ -1,5 +1,6 @@
 import React from 'react';
+import { UnitList } from './list';
 
-const Unit =()=> <div>Unit page!</div>
+const Unit =()=> <UnitList></UnitList>
 
 export default Unit;
