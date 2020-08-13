@@ -1,0 +1,3 @@
+[0813/153012.494:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: Boru sonlandý. (0x6D)
+[0813/153142.805:ERROR:exit_code_watcher_win.cc(87)] Failed to wait for process exit or stop event
+[0813/153143.114:ERROR:registration_protocol_win.cc(131)] TransactNamedPipe: Boru sonlandý. (0x6D)
