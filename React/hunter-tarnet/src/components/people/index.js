@@ -5,6 +5,7 @@ const People = props => {
     const cards = [];
     for (let cardIndex = 0; cardIndex < props.cardCount; cardIndex++) {
         cards.push(<Card
+            key={cardIndex}
             avatar={faker.image.avatar()}
             firstName={faker.name.firstName()}
             joinDate={faker.date.past().getFullYear()}
