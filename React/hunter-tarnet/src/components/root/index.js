@@ -5,13 +5,15 @@ import Dashboard from '../../pages/dashboard';
 import Category from '../../pages/category';
 import Unit from '../../pages/unit';
 import LoadingIndicator from '../loading-indicator';
-
+import { LanguageProvider } from '../../context/language-context';
 const Root = () => <div className="ui container">
-    <Header />
-    <Suspense fallback={<LoadingIndicator />}>
-        <Route path="/" exact component={Dashboard}></Route>
-        <Route path="/category" component={Category}></Route>
-        <Route path="/unit" component={Unit}></Route>
-    </Suspense>
+    <LanguageProvider>
+        <Header />
+        <Suspense fallback={<LoadingIndicator />}>
+            <Route path="/" exact component={Dashboard}></Route>
+            <Route path="/category" component={Category}></Route>
+            <Route path="/unit" component={Unit}></Route>
+        </Suspense>
+    </LanguageProvider>
 </div>
 export default Root;

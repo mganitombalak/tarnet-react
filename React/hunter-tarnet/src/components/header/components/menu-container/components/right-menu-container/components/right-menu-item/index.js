@@ -1,10 +1,7 @@
 import React from 'react'
 
-const RightMenuItem = () => <div className="item">
-                                <div className="ui transparent icon input">
-                                    <input type="text" placeholder="Search..." />
-                                    <i className="search link icon"></i>
-                                </div>
-                            </div>
+const RightMenuItem = props => <div className="item">
+    {props.children}
+</div>
 
 export default RightMenuItem;
