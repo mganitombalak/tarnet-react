@@ -15,6 +15,7 @@ const Header = () =>
                 <MenuItem url="/">Gösterge Paneli</MenuItem>
                 <MenuItem url="/category">Kategoriler</MenuItem>
                 <MenuItem url="/unit">Birimler</MenuItem>
+                <MenuItem url="/hooks">Çengeller</MenuItem>
                 <RightMenuContainer>
                     <RightMenuItem><SearchBox></SearchBox></RightMenuItem>
                     <RightMenuItem><LanguageSelector></LanguageSelector></RightMenuItem>
@@ -24,6 +25,7 @@ const Header = () =>
                 <MenuItem url="/">Dashboard</MenuItem>
                 <MenuItem url="/category">Categories</MenuItem>
                 <MenuItem url="/unit">Units</MenuItem>
+                <MenuItem url="/hooks">Hooks</MenuItem>
                 <RightMenuContainer>
                     <RightMenuItem><SearchBox></SearchBox></RightMenuItem>
                     <RightMenuItem><LanguageSelector></LanguageSelector></RightMenuItem>

@@ -3,6 +3,7 @@ import axios from 'axios';
 import DataTable from '../../../components/data-table';
 import { connect } from 'react-redux';
 import { loadDataActionCreator, ENTITY_TYPE_CATEGORY } from '../../../actions';
+
 export class CategoryList extends React.Component {
     // state = { data: [] }
 
@@ -35,7 +36,8 @@ export class CategoryList extends React.Component {
     }
 }
 
-const mapStateToProps = state => { return { kategoriler: state?.categories ?? [] } }
+// COMBINEDREDUCERS KULLANIRSANIZ BURADAKI categories COMBINEDREDUCER NAME OLUR
+const mapStateToProps = state => {return { kategoriler: state?.categories ?? [] };}
 
 // export default connect(mapStateToProps)(CategoryList)
 //export default connect(mapStateToProps, { setDataActionCreator })(CategoryList)
