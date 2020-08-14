@@ -1,6 +1,7 @@
 //ACTION
 export const ACTION_SET_DATA = 'SET_DATA';
 export const ACTION_LOAD_DATA = 'LOAD_DATA';
+export const ACTION_DELETE_DATA = 'DELETE DATA';
 
 // ACTION TYPE
 export const ENTITY_TYPE_CATEGORY = 'CATEGORY';
@@ -22,5 +23,13 @@ export const loadDataActionCreator = (entityType) => {
     return {
         type: ACTION_LOAD_DATA,
         entityType: entityType
+    };
+}
+
+export const deleteDataActionCreator = (entityType, id) => {
+    return {
+        type: ACTION_DELETE_DATA,
+        entityType: entityType,
+        id: id
     };
 }
