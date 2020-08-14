@@ -1,7 +1,8 @@
-import { ACTION_SET_DATA, ENTITY_TYPE_CATEGORY } from "../actions";
+import { ACTION_SET_DATA, ENTITY_TYPE_CATEGORY, ENTITY_TYPE_UNIT } from "../actions";
 
 const initials = {
-    categories: []
+    categories: [],
+    units: []
 };
 
 export default (state = initials, action) => {
@@ -12,6 +13,8 @@ export default (state = initials, action) => {
         switch (action.entityType) {
             case ENTITY_TYPE_CATEGORY:
                 return { categories: action.payload };
+            case ENTITY_TYPE_UNIT:
+                    return { units: action.payload };                
             default:
                 return state;
         }

@@ -5,6 +5,10 @@ export const ACTION_LOAD_DATA = 'LOAD_DATA';
 // ACTION TYPE
 export const ENTITY_TYPE_CATEGORY = 'CATEGORY';
 
+// ACTION TYPE
+export const ENTITY_TYPE_UNIT = 'UNIT';
+
+
 // ACTION CREATORS
 export const setDataActionCreator = (entityType, payload) => {
     return {
