@@ -41,7 +41,7 @@ function* deleteData(action) {
         }
 
         if (action.entityType === 'UNIT') {
-            let result = yield call(sendHttpRequestForUnit);        
+            let result = yield call(sendHttpRequestForUnitDelete, action.id);        
             // console.log(result);
             yield put(setDataActionCreator(ENTITY_TYPE_UNIT, result));
         }
@@ -115,6 +115,25 @@ const sendHttpRequestForUnit = async () => {
 
 
     return axios.get('http://178.128.248.160:81/api/unit', {
+        headers: { Authorization: `Bearer ${token}` }
+    })
+        .then(response => response.data.data)
+        .catch(err => console.log(err));
+}
+
+
+const sendHttpRequestForUnitDelete = async (id) => {
+    let token;
+    // console.log("SAGA:REQUEST ABOUT TO SENT");
+    await axios.post('http://178.128.248.160:81/api/auth', {
+        "username": "mgani.tombalak@yahoo.com",
+        "password": "123456"
+    })
+        .then(authResponse => { token = authResponse.data.token; })
+        .catch(authErr => console.log(authErr));
+
+
+    return axios.delete('http://178.128.248.160:81/api/unit', { data: {id: id}}, {
         headers: { Authorization: `Bearer ${token}` }
     })
         .then(response => response.data.data)

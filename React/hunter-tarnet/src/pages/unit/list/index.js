@@ -10,6 +10,16 @@ export class UnitList extends React.Component {
         // this.props.dispatch(loadDataActionCreator(ENTITY_TYPE_CATEGORY));
         this.props.loadDataActionCreator(ENTITY_TYPE_UNIT);
     }
+
+    removeAction = (e) => {
+        // e.preventDefault();
+        console.log(e);
+        console.log('remove action is called');        
+        // this.props.dispatch(loadDataActionCreator(ENTITY_TYPE_CATEGORY));
+        this.props.deleteDataActionCreator(ENTITY_TYPE_UNIT, e);
+        this.props.loadDataActionCreator(ENTITY_TYPE_UNIT);      
+    }    
+
     render() {
         // axios.get('http://178.128.248.160:81/api/category', {
         //     headers: { Authorization: 'Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1bmlxdWVfbmFtZSI6ImRkNmNhY2IzLTMzNTQtNDUwMC04ODEyLWYwYjQ4NWY4YjRlNCIsImVtYWlsIjoibWdhbmkudG9tYmFsYWtAeWFob28uY29tIiwicm9sZSI6Im51bGwiLCJuYmYiOjE1OTczOTM2ODcsImV4cCI6MTU5NzM5NDU4NywiaWF0IjoxNTk3MzkzNjg3fQ.zLdfaTI3ftvT7v8zr1C2ojiiidFF4S5eO3qH8aY2ODg' }
@@ -21,7 +31,7 @@ export class UnitList extends React.Component {
         //     .catch(err => console.log(err));
         //throw("My Exception"); //Testing for ErrorCatcher
         const result = this.props.birimler && this.props.birimler.length > 0 ?
-            <DataTable data={this.props.birimler} /> :
+            <DataTable data={this.props.birimler} removeAction={this.removeAction} /> :
             <div>No data</div>;
         return <div className="ui container">
             <div className="ui animated button" tabIndex="0" onClick={this.onLoadData}>
