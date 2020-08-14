@@ -2,7 +2,7 @@ import React from 'react';
 import axios from 'axios';
 import DataTable from '../../../components/data-table';
 import { connect } from 'react-redux';
-import { loadDataActionCreator, ENTITY_TYPE_CATEGORY, ENTITY_TYPE_UNIT } from '../../../actions';
+import { loadDataActionCreator, ENTITY_TYPE_CATEGORY, ENTITY_TYPE_UNIT, deleteDataActionCreator } from '../../../actions';
 export class UnitList extends React.Component {
     // state = { data: [] }
 
@@ -49,4 +49,4 @@ const mapStateToProps = state => { return { birimler: state?.units ?? [] } }
 
 // export default connect(mapStateToProps)(CategoryList)
 //export default connect(mapStateToProps, { setDataActionCreator })(CategoryList)
-export default connect(mapStateToProps, { loadDataActionCreator })(UnitList)
+export default connect(mapStateToProps, { loadDataActionCreator, deleteDataActionCreator })(UnitList)
